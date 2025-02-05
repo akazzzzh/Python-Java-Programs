@@ -1,3 +1,4 @@
+//READING TWO NO.S
 import java.util.Scanner;
 
 public class SumOfTwoNumbers {
@@ -20,3 +21,31 @@ public class SumOfTwoNumbers {
         scanner.close();
     }
 }
+
+//READING THREE NO.S
+import java.util.Scanner;
+
+public class SumOfThreeNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read three numbers from the user
+        System.out.print("Enter first number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = scanner.nextInt();
+
+        System.out.print("Enter third number: ");
+        int num3 = scanner.nextInt();
+
+        // Calculate the sum
+        int sum = num1 + num2 + num3;
+
+        // Display the result
+        System.out.println("Sum of " + num1 + ", " + num2 + ", and " + num3 + " is: " + sum);
+
+        scanner.close();
+    }
+}
+
