@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class AdditionSubtraction {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = scanner.nextInt();
+
+        int sum = num1 + num2;
+        int difference = Math.abs(num1 - num2); // Ensure the subtraction is always positive
+
+        System.out.println("Addition: " + num1 + " + " + num2 + " = " + sum);
+        System.out.println("Subtraction (absolute): |" + num1 + " - " + num2 + "| = " + difference);
+
+        scanner.close();
+    }
+}
