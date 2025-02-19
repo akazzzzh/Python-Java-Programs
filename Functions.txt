@@ -1,0 +1,113 @@
+
+//Prime 
+
+import java.util.*;
+public class Primefunc {
+    public static Boolean Prime(int n){
+        if(n<=1){
+            return false;
+        }
+        else{
+            for(int i=2;i<=n;i++){
+                if(n%i==0){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number :");
+        int n=sc.nextInt();
+        Boolean prime=Prime(n);
+        if(prime){
+            System.out.println(n + "is a prime");
+        }else {
+            System.out.println(n +"is not a prime");
+        }
+
+
+    }
+}
+
+//Factorial
+
+import java.util.*;
+public class Factfunc{
+    public static int Fact(int n){
+        int fact=1;
+        for(int i=1;i<=n;i++){
+            fact*=i;
+        }
+        return fact;
+    }
+    public static void main(String []args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number :");
+        int n=sc.nextInt();
+        int result=Fact(n);
+        System.out.println("Factorial is "+ result);
+
+    }
+}
+
+//Palindrome
+
+import java.util.*;
+public class Palinfunc {
+    public static Boolean Palindrome(String n){
+        int left=0;
+        int right=n.length()-1;
+        while(left<right){
+            if(n.charAt(left)!=n.charAt(right)){
+                return false;
+
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the string or number ;");
+        String n=sc.next();
+        Boolean num=Palindrome(n);
+        if(num){
+            System.out.println(n + "Is a palindrome ");
+        }
+        else{
+            System.out.println(n + "Is not a palindrome");
+        }
+
+    }
+}
+
+
+//Fibonacci
+
+
+import java.util.*;
+public class FiboFunc {
+    public static void Fibo(int n){
+        int first=0;
+        int second=1;
+        System.out.print("Fibonacci series ");
+        for(int i=0;i<=n;i++) {
+            System.out.print(first + " ");
+
+            int next = first + second;
+            first = second;
+            second = next;
+        }
+
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number :");
+        int n=sc.nextInt();
+        Fibo(n);
+
+    }
+}
